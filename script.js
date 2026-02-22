@@ -7,6 +7,7 @@ let currentStatus = 'all';
 let total = document.getElementById('total');
 let interviewCount = document.getElementById('interviewCount');
 let rejectedCount = document.getElementById('rejectedCount');
+let titleCount = document.getElementById('title-count');
 
 // all btn is hare
 const allFilterBtn = document.getElementById('all-filter-btn');
@@ -23,9 +24,10 @@ function calculateCount(){
     total.innerText = allCardSection.children.length;
     interviewCount.innerText = interviewList.length;
     rejectedCount.innerText = rejectedList.length;
+
+   
 }
 
-calculateCount();
 
 function toggleStyle(id){
     allFilterBtn.classList.remove('bg-blue-500', 'text-white');
@@ -37,28 +39,30 @@ function toggleStyle(id){
     interviewFilterBtn.classList.add('bg-white', 'text-[#64748B]');
     rejectedFilterBtn.classList.add('bg-white', 'text-[#64748B]');
     
-  const selected = document.getElementById(id);
+    const selected = document.getElementById(id);
     currentStatus = id;
-
+    
     selected.classList.remove('bg-white','text-[#64748B]');
     selected.classList.add('bg-blue-500', 'text-white');
-
-   if(id == 'interview-filter-btn'){
-    allCardSection.classList.add('hidden');
-    filteredSection.classList.remove('hidden');
-    renderInterview();
-   } 
-   else if(id == 'all-filter-btn'){
-    allCardSection.classList.remove('hidden');
-    filteredSection.classList.add('hidden')
-   }
-   else if(id == 'rejected-filter-btn'){
-    allCardSection.classList.add('hidden');
-    filteredSection.classList.remove('hidden');
-     renderRejected();
-   }
+    
+    if(id == 'interview-filter-btn'){
+        allCardSection.classList.add('hidden');
+        filteredSection.classList.remove('hidden');
+        renderInterview();
+    } 
+    else if(id == 'all-filter-btn'){
+        allCardSection.classList.remove('hidden');
+        filteredSection.classList.add('hidden')
+    }
+    else if(id == 'rejected-filter-btn'){
+        allCardSection.classList.add('hidden');
+        filteredSection.classList.remove('hidden');
+        renderRejected();
+    }
+    calculateCount();
 }
 
+// calculateCount();
 
 mainContainer.addEventListener('click', function(event){
     
@@ -72,10 +76,10 @@ mainContainer.addEventListener('click', function(event){
     const positionName = parentNode.querySelector('.positionName').innerText;
     const selary = parentNode.querySelector('.selary').innerText;
     // const cngStatus = parentNode.querySelector('.cngStatus').innerText;
-    const cngStatus ='Applied';
+    const cngStatus ='Interview';
     const notes = parentNode.querySelector('.notes').innerText;
     
-    parentNode.querySelector('.cngStatus').innerText = 'Applied';
+    parentNode.querySelector('.cngStatus').innerText = 'Interview';
     const cardInfo = {
         companyName, 
         positionName, 
@@ -136,6 +140,22 @@ mainContainer.addEventListener('click', function(event){
     // renderRejected();
     calculateCount();
     }
+
+    // delete button function
+    else if(event.target.closest('.btn-delete')){
+    
+    const card = event.target.closest('.card-container');
+    const companyName = card.querySelector('.companeyName').innerText;
+
+    
+    interviewList = interviewList.filter(item => item.companyName !== companyName);
+
+    rejectedList = rejectedList.filter(item => item.companyName !== companyName);
+
+    card.remove('hidden');
+
+    calculateCount();
+}
    
 })
 
