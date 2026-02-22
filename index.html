@@ -25,7 +25,7 @@
      
 </head>
 <body class="bg-base-300 font">
-    <header class="w-[80%] mx-auto">
+    <header class="bg-base-300 w-[80%] mx-auto sticky top-0">
         <h1 class="text-3xl font-bold text-[#002C5C] pt-16 pb-5">Job Application Tracker</h1>
         <div class="grid grid-cols-3 gap-4">
             <div class="bg-base-100 p-4 rounded-lg">
@@ -42,8 +42,9 @@
                 <p id="rejectedCount" class="text-2xl font-bold text-[#EF4444]">0</p>
             </div>
         </div>
+        <hr class="my-10 mx-auto text-[#64748b3b]">
     </header>
-  <hr class="my-10 w-[80%] mx-auto text-[#64748b3b]">
+  
     <main class="w-[80%] mx-auto pb-10">
          <div id="heading" class="flex justify-between items-center mb-8">
             <h3 class="text-xl font-semibold text-[#002C5C]">Available Jobs</h3>
@@ -98,31 +99,32 @@
                     <button class="btn-delete bg-base-100 rounded-full text-[#64748B] px-3 py-2"><i class="fa-regular fa-trash-can"></i></button>
                  </div> 
               </div>
+
              <!-- card-2 -->
               <div class="card-container border-2 border-[#64748B] p-6 flex">
                 <!-- main part 1-->
                  <div class="card-body p-0 space-y-5">
                     <!-- part-1 -->
                     <div>
-                        <p class="companeyName text-lg font-semibold text-[#002C5C]">Mobile First Corp-2</p>
-                    <p class="positionName text-[16px] text-[#64748B]">React Native Developer</p>
+                        <p class="companeyName text-lg font-semibold text-[#002C5C]">WebFlow Agency-2</p>
+                    <p class="positionName text-[16px] text-[#64748B]">Web Designer & Developer</p>
                     </div>
                    
                     <!-- part-2 -->
                     <div>
-                        <p class="selary text-sm text-[#64748B]">Remote • Full-time • $130,000 - $175,000</p>
+                        <p class="selary text-sm text-[#64748B]">Los Angeles, CA • Part-time • $80,000 - $120,000</p>
                     </div>
                     
                     <!-- part-3 -->
                         <div>
                             <p class="cngStatus text-[16px] font-medium text-[#002C5C] bg-[#EEF4FF] px-3 py-2 rounded-lg w-[120px]">Not Applied
                         </p>
-                     <p class="notes text-[#323B49]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                     <p class="notes text-[#323B49]">Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends.</p>
                         </div>
                     
                         <div>
                         <button class="interview-btn text-sm font-semibold rounded-md text-[#10B981] border-2 border-[#10B981] px-4 py-2 mr-2">Interview</button>
-                        <button class="prjected-btn  text-sm font-semibold rounded-md text-[#EF4444] border-2 border-[#EF4444] px-4 py-2">Rejected</button> 
+                        <button class="rjected-btn  text-sm font-semibold rounded-md text-[#EF4444] border-2 border-[#EF4444] px-4 py-2">Rejected</button> 
                         </div>   
                       <!-- main part 2 --> 
                  </div>
@@ -132,31 +134,33 @@
                     <button class="btn-delete bg-base-100 rounded-full text-[#64748B] px-3 py-2"><i class="fa-regular fa-trash-can"></i></button>
                  </div> 
               </div>
+
              <!-- card-3 -->
               <div class="card-container border-2 border-[#64748B] p-6 flex">
                 <!-- main part 1-->
                  <div class="card-body p-0 space-y-5">
                     <!-- part-1 -->
                     <div>
-                        <p class="companeyName text-lg font-semibold text-[#002C5C]">Mobile First Corp-3</p>
-                    <p class="positionName text-[16px] text-[#64748B]">React Native Developer</p>
+                        <p class="companeyName text-lg font-semibold text-[#002C5C]">DataViz Solutions-3</p>
+                    <p class="positionName text-[16px] text-[#64748B]">Data Visualization Specialist</p>
                     </div>
                    
                     <!-- part-2 -->
                     <div>
-                        <p class="selary text-sm text-[#64748B]">Remote • Full-time • $130,000 - $175,000</p>
+                        <p class="selary text-sm text-[#64748B]">Boston, MA • Full-time • $125,000 - $165,000</p>
                     </div>
                     
                     <!-- part-3 -->
                         <div>
                             <p class="cngStatus text-[16px] font-medium text-[#002C5C] bg-[#EEF4FF] px-3 py-2 rounded-lg w-[120px]">Not Applied
                         </p>
-                     <p class="notes text-[#323B49]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                     <p class="notes text-[#323B49]">Transform complex data into compelling visualizations. Required skills: D3.js, React, and strong analytical thinking.
+                    </p>
                         </div>
                     
                         <div>
                         <button class="interview-btn text-sm font-semibold rounded-md text-[#10B981] border-2 border-[#10B981] px-4 py-2 mr-2">Interview</button>
-                        <button class="prjected-btn  text-sm font-semibold rounded-md text-[#EF4444] border-2 border-[#EF4444] px-4 py-2">Rejected</button> 
+                        <button class="rjected-btn  text-sm font-semibold rounded-md text-[#EF4444] border-2 border-[#EF4444] px-4 py-2">Rejected</button> 
                         </div>   
                       <!-- main part 2 --> 
                  </div>
@@ -166,6 +170,182 @@
                     <button class="btn-delete bg-base-100 rounded-full text-[#64748B] px-3 py-2"><i class="fa-regular fa-trash-can"></i></button>
                  </div> 
               </div>
+
+             <!-- card-4 -->
+              <div class="card-container border-2 border-[#64748B] p-6 flex">
+                <!-- main part 1-->
+                 <div class="card-body p-0 space-y-5">
+                    <!-- part-1 -->
+                    <div>
+                        <p class="companeyName text-lg font-semibold text-[#002C5C]">CloudFirst Inc-4</p>
+                    <p class="positionName text-[16px] text-[#64748B]">Backend Developer</p>
+                    </div>
+                   
+                    <!-- part-2 -->
+                    <div>
+                        <p class="selary text-sm text-[#64748B]">Seattle, WA • Full-time • $140,000 - $190,000</p>
+                    </div>
+                    
+                    <!-- part-3 -->
+                        <div>
+                            <p class="cngStatus text-[16px] font-medium text-[#002C5C] bg-[#EEF4FF] px-3 py-2 rounded-lg w-[120px]">Not Applied
+                        </p>
+                     <p class="notes text-[#323B49]">Design and maintain scalable backend systems using Python and AWS. Work with modern DevOps practices and cloud infrastructure.</p>
+                        </div>
+                    
+                        <div>
+                        <button class="interview-btn text-sm font-semibold rounded-md text-[#10B981] border-2 border-[#10B981] px-4 py-2 mr-2">Interview</button>
+                        <button class="rjected-btn  text-sm font-semibold rounded-md text-[#EF4444] border-2 border-[#EF4444] px-4 py-2">Rejected</button> 
+                        </div>   
+                      <!-- main part 2 --> 
+                 </div>
+
+                <!-- main part 2-->
+                 <div>
+                    <button class="btn-delete bg-base-100 rounded-full text-[#64748B] px-3 py-2"><i class="fa-regular fa-trash-can"></i></button>
+                 </div> 
+              </div>
+
+             <!-- card-5 -->
+              <div class="card-container border-2 border-[#64748B] p-6 flex">
+                <!-- main part 1-->
+                 <div class="card-body p-0 space-y-5">
+                    <!-- part-1 -->
+                    <div>
+                        <p class="companeyName text-lg font-semibold text-[#002C5C]">Innovation Labs-5</p>
+                    <p class="positionName text-[16px] text-[#64748B]">UI/UX Engineer</p>
+                    </div>
+                   
+                    <!-- part-2 -->
+                    <div>
+                        <p class="selary text-sm text-[#64748B]">Austin, TX • Full-time • $110,000 - $150,000</p>
+                    </div>
+                    
+                    <!-- part-3 -->
+                        <div>
+                            <p class="cngStatus text-[16px] font-medium text-[#002C5C] bg-[#EEF4FF] px-3 py-2 rounded-lg w-[120px]">Not Applied
+                        </p>
+                     <p class="notes text-[#323B49]">Create beautiful and functional user interfaces for our suite of products. Strong design skills and frontend development expertise required.</p>
+                        </div>
+                    
+                        <div>
+                        <button class="interview-btn text-sm font-semibold rounded-md text-[#10B981] border-2 border-[#10B981] px-4 py-2 mr-2">Interview</button>
+                        <button class="rjected-btn  text-sm font-semibold rounded-md text-[#EF4444] border-2 border-[#EF4444] px-4 py-2">Rejected</button> 
+                        </div>   
+                      <!-- main part 2 --> 
+                 </div>
+
+                <!-- main part 2-->
+                 <div>
+                    <button class="btn-delete bg-base-100 rounded-full text-[#64748B] px-3 py-2"><i class="fa-regular fa-trash-can"></i></button>
+                 </div> 
+              </div>
+
+             <!-- card-6 -->
+              <div class="card-container border-2 border-[#64748B] p-6 flex">
+                <!-- main part 1-->
+                 <div class="card-body p-0 space-y-5">
+                    <!-- part-1 -->
+                    <div>
+                        <p class="companeyName text-lg font-semibold text-[#002C5C]">MegaCorp Solutions-6</p>
+                    <p class="positionName text-[16px] text-[#64748B]">JavaScript Developer</p>
+                    </div>
+                   
+                    <!-- part-2 -->
+                    <div>
+                        <p class="selary text-sm text-[#64748B]">New York, NY • Full-time • $130,000 - $170,00</p>
+                    </div>
+                    
+                    <!-- part-3 -->
+                        <div>
+                            <p class="cngStatus text-[16px] font-medium text-[#002C5C] bg-[#EEF4FF] px-3 py-2 rounded-lg w-[120px]">Not Applied
+                        </p>
+                     <p class="notes text-[#323B49]">Build enterprise applications with JavaScript and modern frameworks. We offer competitive compensation, health insurance, and professional development opportunities.</p>
+                        </div>
+                    
+                        <div>
+                        <button class="interview-btn text-sm font-semibold rounded-md text-[#10B981] border-2 border-[#10B981] px-4 py-2 mr-2">Interview</button>
+                        <button class="rjected-btn  text-sm font-semibold rounded-md text-[#EF4444] border-2 border-[#EF4444] px-4 py-2">Rejected</button> 
+                        </div>   
+                      <!-- main part 2 --> 
+                 </div>
+
+                <!-- main part 2-->
+                 <div>
+                    <button class="btn-delete bg-base-100 rounded-full text-[#64748B] px-3 py-2"><i class="fa-regular fa-trash-can"></i></button>
+                 </div> 
+              </div>
+
+             <!-- card-7 -->
+              <div class="card-container border-2 border-[#64748B] p-6 flex">
+                <!-- main part 1-->
+                 <div class="card-body p-0 space-y-5">
+                    <!-- part-1 -->
+                    <div>
+                        <p class="companeyName text-lg font-semibold text-[#002C5C]">StartupXYZ-7</p>
+                    <p class="positionName text-[16px] text-[#64748B]">Full Stack Engineer</p>
+                    </div>
+                   
+                    <!-- part-2 -->
+                    <div>
+                        <p class="selary text-sm text-[#64748B]">Remote • Full-time • $120,000 - $160,000</p>
+                    </div>
+                    
+                    <!-- part-3 -->
+                        <div>
+                            <p class="cngStatus text-[16px] font-medium text-[#002C5C] bg-[#EEF4FF] px-3 py-2 rounded-lg w-[120px]">Not Applied
+                        </p>
+                     <p class="notes text-[#323B49]">Join our fast-growing startup and work on our core platform. Experience with Node.js and React required. Great benefits and equity package included.</p>
+                        </div>
+                    
+                        <div>
+                        <button class="interview-btn text-sm font-semibold rounded-md text-[#10B981] border-2 border-[#10B981] px-4 py-2 mr-2">Interview</button>
+                        <button class="rjected-btn  text-sm font-semibold rounded-md text-[#EF4444] border-2 border-[#EF4444] px-4 py-2">Rejected</button> 
+                        </div>   
+                      <!-- main part 2 --> 
+                 </div>
+
+                <!-- main part 2-->
+                 <div>
+                    <button class="btn-delete bg-base-100 rounded-full text-[#64748B] px-3 py-2"><i class="fa-regular fa-trash-can"></i></button>
+                 </div> 
+              </div>
+
+             <!-- card-8 -->
+              <div class="card-container border-2 border-[#64748B] p-6 flex">
+                <!-- main part 1-->
+                 <div class="card-body p-0 space-y-5">
+                    <!-- part-1 -->
+                    <div>
+                        <p class="companeyName text-lg font-semibold text-[#002C5C]">TechCorp Industries-8</p>
+                    <p class="positionName text-[16px] text-[#64748B]">Senior Frontend Developer</p>
+                    </div>
+                   
+                    <!-- part-2 -->
+                    <div>
+                        <p class="selary text-sm text-[#64748B]">San Francisco, CA • Full-time • $130,000 - $175,000</p>
+                    </div>
+                    
+                    <!-- part-3 -->
+                        <div>
+                            <p class="cngStatus text-[16px] font-medium text-[#002C5C] bg-[#EEF4FF] px-3 py-2 rounded-lg w-[120px]">Not Applied
+                        </p>
+                     <p class="notes text-[#323B49]">We are looking for an experienced Frontend Developer to build scalable web applications using React and TypeScript. You will work with a talented team on cutting-edge projects.</p>
+                        </div>
+                    
+                        <div>
+                        <button class="interview-btn text-sm font-semibold rounded-md text-[#10B981] border-2 border-[#10B981] px-4 py-2 mr-2">Interview</button>
+                        <button class="rjected-btn  text-sm font-semibold rounded-md text-[#EF4444] border-2 border-[#EF4444] px-4 py-2">Rejected</button> 
+                        </div>   
+                      <!-- main part 2 --> 
+                 </div>
+
+                <!-- main part 2-->
+                 <div>
+                    <button class="btn-delete bg-base-100 rounded-full text-[#64748B] px-3 py-2"><i class="fa-regular fa-trash-can"></i></button>
+                 </div> 
+              </div>
+             
              
           </section>
     </main>

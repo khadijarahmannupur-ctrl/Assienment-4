@@ -1,6 +1,7 @@
 // all list item is haire
 let interviewList = [];
 let rejectedList = [];
+let currentStatus = 'all';
 
 // all counter is hare
 let total = document.getElementById('total');
@@ -37,16 +38,24 @@ function toggleStyle(id){
     rejectedFilterBtn.classList.add('bg-white', 'text-[#64748B]');
     
   const selected = document.getElementById(id);
+    currentStatus = id;
+
     selected.classList.remove('bg-white','text-[#64748B]');
     selected.classList.add('bg-blue-500', 'text-white');
 
    if(id == 'interview-filter-btn'){
     allCardSection.classList.add('hidden');
-    filteredSection.classList.remove('hidden')
+    filteredSection.classList.remove('hidden');
+    renderInterview();
    } 
    else if(id == 'all-filter-btn'){
     allCardSection.classList.remove('hidden');
     filteredSection.classList.add('hidden')
+   }
+   else if(id == 'rejected-filter-btn'){
+    allCardSection.classList.add('hidden');
+    filteredSection.classList.remove('hidden');
+     renderRejected();
    }
 }
 
@@ -70,26 +79,29 @@ mainContainer.addEventListener('click', function(event){
     const cardInfo = {
         companyName, 
         positionName, 
-        selary: 'Applied', 
+        selary, 
         cngStatus, 
         notes
     }
-    // console.log(cardInfo.companyName)
 
     const companyExist = interviewList.find(item=> item.companyName == cardInfo.companyName);
     if(!companyExist){
         interviewList.push(cardInfo);
     }
-    // console.log(interviewList);
-    console.log(companyExist);
+    
+    rejectedList = rejectedList.filter(item => item.companyName != cardInfo.companyName);
 
-    renderInterview();
+    if(currentStatus == 'rejected-filter-btn'){
+        renderRejected();
+    }
+
+    // renderInterview();
     calculateCount();
     }
 
 //   rejected click function
 
-    else if(event.target.classList.contains('rejected-btn')){
+    else if(event.target.classList.contains('rjected-btn')){
         
     const parentNode = event.target.parentNode.parentNode;
 
@@ -97,32 +109,37 @@ mainContainer.addEventListener('click', function(event){
     const positionName = parentNode.querySelector('.positionName').innerText;
     const selary = parentNode.querySelector('.selary').innerText;
     // const cngStatus = parentNode.querySelector('.cngStatus').innerText;
-    const cngStatus ='Applied';
+    const cngStatus ='Rejected';
     const notes = parentNode.querySelector('.notes').innerText;
     
-    parentNode.querySelector('.cngStatus').innerText = 'Applied';
+    parentNode.querySelector('.cngStatus').innerText = 'Rejected';
     const cardInfo = {
         companyName, 
         positionName, 
-        selary: 'Applied', 
+        selary, 
         cngStatus, 
         notes
     }
     // console.log(cardInfo.companyName)
 
-    const companyExist = interviewList.find(item=> item.companyName == cardInfo.companyName);
+    const companyExist = rejectedList.find(item=> item.companyName == cardInfo.companyName);
     if(!companyExist){
-        interviewList.push(cardInfo);
+        rejectedList.push(cardInfo);
     }
-    // console.log(interviewList);
-    console.log(companyExist);
+    
+    interviewList = interviewList.filter(item=> item.companyName != cardInfo.companyName);
 
-    renderInterview();
+    if(currentStatus == 'interview-filter-btn'){
+        renderInterview();
+    }
+
+    // renderRejected();
     calculateCount();
     }
    
 })
 
+// interview page show design
 function renderInterview(){
     
     filteredSection.innerHTML = '' 
@@ -137,24 +154,70 @@ function renderInterview(){
                     <!-- part-1 -->
                     <div>
                     <p class="companeyName text-lg font-semibold text-[#002C5C]">${interview.companyName}</p>
-                    <p class="positionName text-[16px] text-[#64748B]">React Native Developer</p>
+                    <p class="positionName text-[16px] text-[#64748B]">${interview.positionName}</p>
                     </div>
                    
                     <!-- part-2 -->
                     <div>
-                        <p class="selary text-sm text-[#64748B]">Remote • Full-time • $130,000 - $175,000</p>
+                        <p class="selary text-sm text-[#64748B]">${interview.selary}</p>
                     </div>
                     
                     <!-- part-3 -->
                         <div>
                             <p class="cngStatus text-[16px] font-medium text-[#002C5C] bg-[#EEF4FF] px-3 py-2 rounded-lg w-[120px]">${interview.cngStatus}
                         </p>
-                     <p class="notes text-[#323B49]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                     <p class="notes text-[#323B49]">${interview.notes}</p>
                         </div>
                     
                         <div>
                         <button class="interview-btn text-sm font-semibold rounded-md text-[#10B981] border-2 border-[#10B981] px-4 py-2 mr-2">Interview</button>
-                        <button class="prjected-btn  text-sm font-semibold rounded-md text-[#EF4444] border-2 border-[#EF4444] px-4 py-2">Rejected</button> 
+                        <button class="rjected-btn  text-sm font-semibold rounded-md text-[#EF4444] border-2 border-[#EF4444] px-4 py-2">Rejected</button> 
+                        </div>   
+                      <!-- main part 2 --> 
+                 </div>
+
+                <!-- main part 2-->
+                 <div>
+                    <button class="btn-delete bg-base-100 rounded-full text-[#64748B] px-3 py-2"><i class="fa-regular fa-trash-can"></i></button>
+                 </div>
+        `
+        filteredSection.appendChild(div)
+    }
+}
+
+//rejected page show design
+function renderRejected(){
+    
+    filteredSection.innerHTML = '' 
+
+    for(let rejected of rejectedList){
+        // console.log(interview);
+        let div = document.createElement('div');
+        div.className = 'card-container border-2 border-[#64748B] p-6 flex mb-4';
+        div.innerHTML = `
+        <!-- main part 1-->
+                 <div class="card-body p-0 space-y-5">
+                    <!-- part-1 -->
+                    <div>
+                    <p class="companeyName text-lg font-semibold text-[#002C5C]">${rejected.companyName}</p>
+                    <p class="positionName text-[16px] text-[#64748B]">${rejected.positionName}</p>
+                    </div>
+                   
+                    <!-- part-2 -->
+                    <div>
+                        <p class="selary text-sm text-[#64748B]">${rejected.selary}</p>
+                    </div>
+                    
+                    <!-- part-3 -->
+                        <div>
+                            <p class="cngStatus text-[16px] font-medium text-[#002C5C] bg-[#EEF4FF] px-3 py-2 rounded-lg w-[120px]">${rejected.cngStatus}
+                        </p>
+                     <p class="notes text-[#323B49]">${rejected.notes}</p>
+                        </div>
+                    
+                        <div>
+                        <button class="interview-btn text-sm font-semibold rounded-md text-[#10B981] border-2 border-[#10B981] px-4 py-2 mr-2">Interview</button>
+                        <button class="rjected-btn  text-sm font-semibold rounded-md text-[#EF4444] border-2 border-[#EF4444] px-4 py-2">Rejected</button> 
                         </div>   
                       <!-- main part 2 --> 
                  </div>
