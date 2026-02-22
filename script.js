@@ -169,10 +169,27 @@ mainContainer.addEventListener('click', function(event){
    
 })
 
+
+// defult show card 
+const emptyCard = `
+<div class="w-[80%] mx-auto text-center flex flex-col items-center bg-base-300 rounded-lg
+py-[110px]">
+<img src="./images/jobs.png" alt="">
+<h2 class="text-2xl font-bold text-[#002C5C] mb-2">No jobs available</h2>
+<p class="text-[16px] font-medium text-[#64748B]">Check back soon for new job opportunities</p>
+</div>
+`
+
 // interview page show design
+
 function renderInterview(){
     
-    filteredSection.innerHTML = '' 
+    filteredSection.innerHTML = '';
+
+    if(interviewList.length === 0){
+        filteredSection.innerHTML = emptyCard;
+        return;
+    }
 
     for(let interview of interviewList){
         // console.log(interview);
@@ -218,7 +235,12 @@ function renderInterview(){
 //rejected page show design
 function renderRejected(){
     
-    filteredSection.innerHTML = '' 
+    filteredSection.innerHTML = '' ;
+
+    if(rejectedList.length === 0){
+        filteredSection.innerHTML = emptyCard;
+        return;
+    }
 
     for(let rejected of rejectedList){
         // console.log(interview);
