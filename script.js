@@ -194,7 +194,7 @@ function renderInterview(){
     for(let interview of interviewList){
         // console.log(interview);
         let div = document.createElement('div');
-        div.className = 'card-container border-2 border-[#64748B] p-6 flex mb-4';
+        div.className = 'card-container bg-base-100 rounded-xl border border-[#64748B] p-6 flex mb-4';
         div.innerHTML = `
         <!-- main part 1-->
                  <div class="card-body p-0 space-y-5">
@@ -217,8 +217,8 @@ function renderInterview(){
                         </div>
                     
                         <div>
-                        <button class="interview-btn text-sm font-semibold rounded-md text-[#10B981] border-2 border-[#10B981] px-4 py-2 mr-2">Interview</button>
-                        <button class="rjected-btn  text-sm font-semibold rounded-md text-[#EF4444] border-2 border-[#EF4444] px-4 py-2">Rejected</button> 
+                        <button class="interview-btn btn hover:bg-[#bee7d9c2] text-sm font-semibold rounded-md text-[#10B981] border-2 border-[#10B981] px-4 py-2 mr-2">Interview</button>
+                        <button class="rjected-btn btn hover:bg-[#ecd8d8] text-sm font-semibold rounded-md text-[#EF4444] border-2 border-[#EF4444] px-4 py-2">Rejected</button> 
                         </div>   
                       <!-- main part 2 --> 
                  </div>
@@ -245,7 +245,7 @@ function renderRejected(){
     for(let rejected of rejectedList){
         // console.log(interview);
         let div = document.createElement('div');
-        div.className = 'card-container border-2 border-[#64748B] p-6 flex mb-4';
+        div.className = 'card-container bg-base-100 rounded-xl border border-[#64748B] p-6 flex mb-4';
         div.innerHTML = `
         <!-- main part 1-->
                  <div class="card-body p-0 space-y-5">
@@ -268,8 +268,8 @@ function renderRejected(){
                         </div>
                     
                         <div>
-                        <button class="interview-btn text-sm font-semibold rounded-md text-[#10B981] border-2 border-[#10B981] px-4 py-2 mr-2">Interview</button>
-                        <button class="rjected-btn  text-sm font-semibold rounded-md text-[#EF4444] border-2 border-[#EF4444] px-4 py-2">Rejected</button> 
+                        <button class="interview-btn btn hover:bg-[#bee7d9c2] text-sm font-semibold rounded-md text-[#10B981] border-2 border-[#10B981] px-4 py-2 mr-2">Interview</button>
+                        <button class="rjected-btn btn hover:bg-[#ecd8d8] text-sm font-semibold rounded-md text-[#EF4444] border-2 border-[#EF4444] px-4 py-2">Rejected</button> 
                         </div>   
                       <!-- main part 2 --> 
                  </div>
