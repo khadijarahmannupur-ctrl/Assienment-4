@@ -24,9 +24,9 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
      
 </head>
-<body class="bg-base-300 font">
-    <header class="bg-base-300 w-[80%] mx-auto sticky top-0">
-        <h1 class="text-3xl font-bold text-[#002C5C] pt-16 pb-5">Job Application Tracker</h1>
+<body class="bg-base-200 font">
+    <header class="bg-base-200 px-[10%] mx-auto sticky top-0">
+        <h1 class="text-3xl font-bold text-[#002C5C] pt-7 pb-5">Job Application Tracker</h1>
         <div class="grid grid-cols-3 gap-4">
             <div class="bg-base-100 p-4 rounded-lg">
                 <p class="font-medium text-[#323B49]">Total</p>
@@ -42,11 +42,13 @@
                 <p id="rejectedCount" class="text-2xl font-bold text-[#EF4444]">0</p>
             </div>
         </div>
-        <hr class="my-10 mx-auto text-[#64748b3b]">
+        <hr class="my-7 mx-auto text-[#64748b3b]">
+     
     </header>
   
-    <main class="w-[80%] mx-auto pb-10">
-         <div id="heading" class="flex justify-between items-center mb-8">
+    <main class="w-[80%] mx-auto pb-60">
+        <!-- card heading -->
+        <div id="heading" class="flex justify-between items-center mb-4">
             <h3 class="text-xl font-semibold text-[#002C5C]">Available Jobs</h3>
             <div class="flex gap-0.5">
                 <p id="title-count" class="text-[16px] font-medium text-[#64748B]">8</p>
@@ -54,7 +56,8 @@
             </div>
          </div>
 
-         <div class="space-x-2 mb-4">
+         <!-- header btn -->
+          <div class="space-x-2 mb-4">
             <button onclick="toggleStyle('all-filter-btn')" id="all-filter-btn" class="bg-blue-500 text-white text-sm font-semibold 
             px-4 py-2 lg:px-8 lg:py-2.5 rounded-sm">All</button>
             <button onclick="toggleStyle('interview-filter-btn')" id="interview-filter-btn" class="bg-white text-[#64748B] text-sm font-semibold px-8 py-2.5 rounded-sm">Interview</button>
@@ -69,7 +72,7 @@
 
           <section id="allCards" class="space-y-4">
              <!-- card-1 -->
-              <div class="card-container border-2 border-[#64748B] p-6 flex">
+              <div class="card-container bg-base-100 rounded-xl border border-[#64748B] p-6 flex">
                 <!-- main part 1-->
                  <div class="card-body p-0 space-y-5">
                     <!-- part-1 -->
@@ -104,7 +107,7 @@
               </div>
 
              <!-- card-2 -->
-              <div class="card-container border-2 border-[#64748B] p-6 flex">
+              <div class="card-container bg-base-100 rounded-xl border border-[#64748B] p-6 flex">
                 <!-- main part 1-->
                  <div class="card-body p-0 space-y-5">
                     <!-- part-1 -->
@@ -139,7 +142,7 @@
               </div>
 
              <!-- card-3 -->
-              <div class="card-container border-2 border-[#64748B] p-6 flex">
+              <div class="card-container bg-base-100 rounded-xl border border-[#64748B] p-6 flex">
                 <!-- main part 1-->
                  <div class="card-body p-0 space-y-5">
                     <!-- part-1 -->
@@ -175,7 +178,7 @@
               </div>
 
              <!-- card-4 -->
-              <div class="card-container border-2 border-[#64748B] p-6 flex">
+              <div class="card-container bg-base-100 rounded-xl border border-[#64748B] p-6 flex">
                 <!-- main part 1-->
                  <div class="card-body p-0 space-y-5">
                     <!-- part-1 -->
@@ -210,7 +213,7 @@
               </div>
 
              <!-- card-5 -->
-              <div class="card-container border-2 border-[#64748B] p-6 flex">
+              <div class="card-container bg-base-100 rounded-xl border border-[#64748B] p-6 flex">
                 <!-- main part 1-->
                  <div class="card-body p-0 space-y-5">
                     <!-- part-1 -->
@@ -245,7 +248,7 @@
               </div>
 
              <!-- card-6 -->
-              <div class="card-container border-2 border-[#64748B] p-6 flex">
+              <div class="card-container bg-base-100 rounded-xl border border-[#64748B] p-6 flex">
                 <!-- main part 1-->
                  <div class="card-body p-0 space-y-5">
                     <!-- part-1 -->
@@ -280,7 +283,7 @@
               </div>
 
              <!-- card-7 -->
-              <div class="card-container border-2 border-[#64748B] p-6 flex">
+              <div class="card-container bg-base-100 rounded-xl border border-[#64748B] p-6 flex">
                 <!-- main part 1-->
                  <div class="card-body p-0 space-y-5">
                     <!-- part-1 -->
@@ -315,7 +318,7 @@
               </div>
 
              <!-- card-8 -->
-              <div class="card-container border-2 border-[#64748B] p-6 flex">
+              <div class="card-container bg-base-100 rounded-xl border border-[#64748B] p-6 flex">
                 <!-- main part 1-->
                  <div class="card-body p-0 space-y-5">
                     <!-- part-1 -->
