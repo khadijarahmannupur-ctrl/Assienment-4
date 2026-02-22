@@ -24,7 +24,17 @@ function calculateCount(){
     total.innerText = allCardSection.children.length;
     interviewCount.innerText = interviewList.length;
     rejectedCount.innerText = rejectedList.length;
-
+    
+    // tab wise count
+    if(currentStatus === 'interview-filter-btn'){
+        titleCount.innerText = interviewList.length;
+    }
+    else if(currentStatus === 'rejected-filter-btn'){
+        titleCount.innerText = rejectedList.length;
+    }
+    else{
+        titleCount.innerText = allCardSection.children.length;
+    }
    
 }
 
