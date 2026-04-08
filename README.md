@@ -35,3 +35,54 @@ the child can be controlled from the parent.
 ANS:preventDefault() is a JavaScript event method that stops the default behavior of an element in the browser, but does not stop event propagation.
 
 stopPropagation() is an event method that stops the event from propagating or bubbling to the parent element.
+
+# 📋 Job Application Tracker
+
+🔗 **Live Site:** https://khadijarahmannupur-ctrl.github.io/Assienment-4/  
+💻 **Repository:** https://github.com/khadijarahmannupur-ctrl/Assienment-4  
+
+---
+
+## 📖 Project Overview
+
+The **Job Application Tracker** is a frontend web application designed to help users efficiently manage and track their job applications.
+
+Users can store job-related information, monitor application status, and organize their job search process in a structured way. This project focuses on usability, clean UI, and responsive design.
+
+Such systems are commonly used to track applications, update statuses, and manage job-related data in one place. :contentReference[oaicite:0]{index=0}
+
+---
+
+---
+
+## 🛠️ Technologies Used
+
+- HTML5  
+- CSS3  
+- Tailwind CSS  
+- JavaScript  
+- Local Storage (for saving data)
+
+---
+
+## ✨ Key Features
+
+- 📌 Add and manage job applications  
+- 📊 Track application status (Applied, Interview, etc.)  
+- 💾 Data stored in Local Storage  
+- 📱 Fully Responsive Design  
+- 🎨 Clean & User-Friendly UI  
+- 🔍 Organized job tracking system  
+
+---
+
+## 📦 Dependencies
+
+This project uses:
+
+- Tailwind CSS (for styling)  
+
+> No heavy frameworks used — lightweight and fast.
+
+---
+
